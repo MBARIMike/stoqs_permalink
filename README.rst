@@ -46,6 +46,8 @@ The steps below will get you up and running with a local development environment
 
 First make sure to create and activate a virtualenv_, then open a terminal at the project root and install the requirements for local development::
 
+    $ PG_CONFIG=$(locate --regex "bin/pg_config$")
+    $ export PATH=$(dirname $PG_CONFIG):$PATH
     $ pip install -r requirements/local.txt
 
 .. _virtualenv: http://docs.python-guide.org/en/latest/dev/virtualenvs/
