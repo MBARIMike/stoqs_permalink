@@ -96,7 +96,8 @@ class Common(Configuration):
     # END FIXTURE CONFIGURATION
 
     # EMAIL CONFIGURATION
-    EMAIL_BACKEND = values.Value('django.core.mail.backends.smtp.EmailBackend')
+    ##EMAIL_BACKEND = values.Value('django.core.mail.backends.smtp.EmailBackend')
+    EMAIL_BACKEND = values.Value('django.core.mail.backends.console.EmailBackend')
     # END EMAIL CONFIGURATION
 
     # MANAGER CONFIGURATION
@@ -111,6 +112,7 @@ class Common(Configuration):
 
     # DATABASE CONFIGURATION
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
+    # 12factor.net: export DATABASE_URL="postgres://<u>:<p>@127.0.0.1:5432/stoqs_permalink"
     DATABASES = values.DatabaseURLValue('postgres://localhost/stoqs_permalink')
     # END DATABASE CONFIGURATION
 

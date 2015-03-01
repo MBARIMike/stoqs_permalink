@@ -2,6 +2,10 @@
   "name": "stoqs_permalink",
   "version": "0.1.0",
   "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/MBARIMike/stoqs_permalink.git"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-watch": "~0.5.3",
@@ -9,7 +13,7 @@
     "connect-livereload": "~0.3.2",
     "grunt-contrib-compass": "~0.7.0",
     "time-grunt": "~0.2.7",
-    "load-grunt-tasks": "~0.2.1"
+    "load-grunt-tasks": "~3.1.0"
   },
   "engines": {
     "node": ">=0.8.0"
