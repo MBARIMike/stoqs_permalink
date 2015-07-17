@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath="$PWD/stoqs_permalink" wsgi:application
+web: gunicorn config.wsgi:application

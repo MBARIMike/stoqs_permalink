@@ -21,7 +21,8 @@ module.exports = function (grunt) {
       fonts: this.app + '/static/fonts',
       images: this.app + '/static/images',
       js: this.app + '/static/js',
-      manageScript: this.app + '/manage.py'
+      manageScript: 'manage.py',
+      
     }
   };
 
@@ -81,8 +82,9 @@ module.exports = function (grunt) {
         bg: true
       },
       runDjango: {
-        cmd: 'python <%= paths.manageScript %> runserver_plus 0.0.0.0:8000'
-      }
+        cmd: 'python <%= paths.manageScript %> runserver'
+      },
+      
     }
   });
 
@@ -98,4 +100,5 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'build'
   ]);
+  
 };
